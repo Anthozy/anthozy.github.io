@@ -3,108 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Técnico Help Desk y Soporte IT</title>
+    <title>CV - Técnico Help Desk y Soporte IT (Nivel 2)</title>
     <style>
         :root {
-            --primary-color: #0066cc;
-            --dark-color: #333333;
-            --light-color: #f4f6f9;
-            --border-color: #d1d5db;
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --dark-color: #0f172a;
+            --text-muted: #475569;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --tag-bg: #eff6ff;
+            --tag-text: #1e40af;
         }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
+
         body {
-            background-color: var(--light-color);
+            background-color: var(--bg-color);
             color: var(--dark-color);
             line-height: 1.6;
-            padding: 20px;
+            padding: 40px 20px;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: var(--card-bg);
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 1px solid var(--border-color);
         }
+
         header {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
         }
+
         h1 {
-            color: var(--primary-color);
+            color: var(--dark-color);
             font-size: 2.2rem;
-            margin-bottom: 5px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
         }
-        h2 {
-            font-size: 1.2rem;
-            color: #666;
-            font-weight: 400;
-            margin-bottom: 15px;
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 18px;
         }
+
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 16px 24px;
             font-size: 0.95rem;
-            color: #555;
+            color: var(--text-muted);
         }
-        .contact-info span {
+
+        .contact-info span, .contact-info a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--dark-color);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
-        section {
-            margin-bottom: 30px;
+
+        h3::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
         }
-        h3 {
-            font-size: 1.3rem;
-            color: var(--dark-color);
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 10px;
-        }
+
         p {
+            color: var(--text-muted);
             margin-bottom: 10px;
-            color: #444;
         }
-        .job {
-            margin-bottom: 20px;
-        }
-        .job-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: var(--dark-color);
-        }
-        .job-company {
-            color: var(--primary-color);
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-        }
+
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
+
         .skill-tag {
-            background-color: #e6f0fa;
-            color: var(--primary-color);
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.88rem;
             font-weight: 600;
+            border: 1px solid #dbeafe;
         }
-        @media (max-width: 600px) {
+
+        .job {
+            background: #fafafa;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+
+        .job-company {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: #64748b;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .job ul {
+            margin-left: 20px;
+            color: var(--text-muted);
+        }
+
+        .job li {
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px;
+            }
             .container {
-                padding: 20px;
+                padding: 24px;
             }
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.75rem;
+            }
+            .job-header {
+                flex-direction: column;
             }
         }
     </style>
@@ -113,30 +200,31 @@
 
     <div class="container">
         <header>
-            <h1>Técnico Help Desk y Soporte IT</h1>
-            <h2>Especialista en Soporte Técnico, Sistemas e Infraestructura Multisede</h2>
+            <h1>Técnico Help Desk y Soporte IT (Nivel 2)</h1>
+            <div class="subtitle">Especialista en Soporte Técnico, Sistemas e Infraestructura Multisede</div>
             <div class="contact-info">
                 <span>📍 Valencia, España</span>
-                <span>📧 anthozy@msn.com</span>
-                <span>💼 https://www.linkedin.com/in/antonio-guardiola-haba-b480664a?utm_source=share_via&utm_content=profile&utm_medium=member_android</span>
+                <span>📧 <a href="mailto:anthozy@msn.com">anthozy@msn.com</a></span>
+                <span>💼 <a href="https://www.linkedin.com/in/antonio-guardiola-haba-b480664a" target="_blank" rel="noopener noreferrer">Perfil de LinkedIn</a></span>
             </div>
         </header>
 
         <section>
             <h3>Perfil Profesional</h3>
-            <p>Técnico de soporte IT con sólida experiencia en la gestión y resolución integral de incidencias técnicas en entornos multisede. Especializado en atención a usuarios, diagnóstico de hardware/software y control de flujos de trabajo mediante herramientas de ticketing.</p>
+            <p>Técnico de Soporte IT de Nivel 2 con sólida experiencia en la gestión y resolución integral de incidencias complejas en entornos multisede. Especializado en atención avanzada a usuarios, diagnóstico de hardware/software, administración de sistemas y optimización de flujos de trabajo mediante plataformas ITSM/ticketing.</p>
         </section>
 
         <section>
             <h3>Habilidades Técnicas</h3>
             <div class="skills-grid">
+                <span class="skill-tag">Soporte Nivel 2</span>
                 <span class="skill-tag">Linux & Windows</span>
                 <span class="skill-tag">ServiceNow</span>
                 <span class="skill-tag">Jira</span>
-                <span class="skill-tag">Soporte Help Desk</span>
+                <span class="skill-tag">Gestión de Ticketing</span>
                 <span class="skill-tag">Infraestructura IT</span>
                 <span class="skill-tag">Redes y Telefonía</span>
-                <span class="skill-tag">Hardware y Periféricos</span>
+                <span class="skill-tag">Hardware y Mantenimiento</span>
             </div>
         </section>
 
@@ -144,17 +232,32 @@
             <h3>Experiencia Profesional</h3>
             
             <div class="job">
-                <div class="job-title">Técnico Help Desk y Soporte de Nivel 2</div>
-                <div class="job-company">Eltec (Proyecto supermercados Día) | 2021 - Act.</div>
-                <p>Gestión y resolución remota integral de un amplio espectro de incidencias técnicas en infraestructura IT multisede (entornos Linux y Windows).</p>
-                <p>Control, seguimiento y escalado de incidencias mediante plataformas de ticketing (ServiceNow y Jira).</p>
-                <p>Soporte especializado en terminales, sistemas de redes, telefonía y periféricos comerciales bajo metodologías SLA.</p>
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Técnico Help Desk y Soporte IT - Nivel 2</div>
+                        <div class="job-company">Eltec (Proyecto supermercados Día)</div>
+                    </div>
+                    <span class="job-date">2021 - Actualidad</span>
+                </div>
+                <ul>
+                    <li>Gestión y resolución remota integral de incidencias técnicas de Nivel 2 en infraestructura IT multisede (entornos Linux y Windows).</li>
+                    <li>Control, seguimiento, diagnóstico avanzado y escalado de tickets mediante plataformas ServiceNow y Jira.</li>
+                    <li>Soporte técnico especializado en terminales, equipamiento de red, telefonía IP y periféricos bajo estrictos acuerdos de nivel de servicio (SLA).</li>
+                </ul>
             </div>
 
             <div class="job">
-                <div class="job-title">Técnico de Campo de Equipos Informáticos</div>
-                <div class="job-company">Eltec (Proyecto Ayuntamiento de Valencia) | 2019 - 2021</div>
-                <p>Diagnóstico, reparación y mantenimiento preventivo/correctivo de equipos informáticos (PC, portátiles) y una amplia gama de impresoras distribuidas en las diferentes dependencias del Ayuntamiento.</p>
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Técnico de Campo y Mantenimiento de Equipos</div>
+                        <div class="job-company">Eltec (Proyecto Ayuntamiento de Valencia)</div>
+                    </div>
+                    <span class="job-date">2019 - 2021</span>
+                </div>
+                <ul>
+                    <li>Diagnóstico, reparación física y mantenimiento preventivo/correctivo de estaciones de trabajo (PC, portátiles) e impresoras en dependencias municipales.</li>
+                    <li>Despliegue y configuración de hardware de red y puestos de trabajo in situ.</li>
+                </ul>
             </div>
 
         </section>

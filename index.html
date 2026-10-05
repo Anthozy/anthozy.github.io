@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Técnico Help Desk y Soporte IT (Nivel 1)</title>
+    <title>CV - Antonio Guardiola Haba | Técnico Help Desk y Soporte IT</title>
     <style>
         :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
+            --primary-color: #0284c7;
+            --primary-dark: #0369a1;
             --dark-color: #0f172a;
-            --text-muted: #475569;
-            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --text-muted: #64748b;
+            --bg-color: #f1f5f9;
             --card-bg: #ffffff;
             --border-color: #e2e8f0;
-            --tag-bg: #eff6ff;
-            --tag-text: #1e40af;
+            --tag-bg: #e0f2fe;
+            --tag-text: #0369a1;
         }
 
         * {
@@ -26,247 +27,344 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--dark-color);
+            color: var(--text-color);
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 30px 15px;
         }
 
-        .container {
-            max-width: 850px;
+        .resume-container {
+            max-width: 900px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 48px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
             border: 1px solid var(--border-color);
         }
 
         header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 24px;
-            margin-bottom: 32px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 40px;
         }
 
-        h1 {
-            color: var(--dark-color);
-            font-size: 2.2rem;
+        header h1 {
+            font-size: 2.3rem;
             font-weight: 700;
+            color: #ffffff;
             margin-bottom: 6px;
             letter-spacing: -0.02em;
         }
 
-        .subtitle {
-            font-size: 1.15rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 18px;
+        header h2 {
+            font-size: 1.2rem;
+            color: #38bdf8;
+            font-weight: 500;
+            margin-bottom: 20px;
         }
 
-        .contact-info {
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            border-top: 1px solid #334155;
+            padding-top: 18px;
+        }
+
+        .contact-item {
             display: flex;
-            flex-wrap: wrap;
-            gap: 16px 24px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .contact-info span, .contact-info a {
-            display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        .contact-info a {
-            color: var(--primary-color);
+        .contact-item a {
+            color: #38bdf8;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s ease;
+            transition: color 0.2s;
         }
 
-        .contact-info a:hover {
-            color: var(--primary-hover);
+        .contact-item a:hover {
+            color: #7dd3fc;
             text-decoration: underline;
+        }
+
+        .content {
+            padding: 36px 40px;
         }
 
         section {
             margin-bottom: 32px;
         }
 
-        h3 {
-            font-size: 1.25rem;
+        .section-title {
+            font-size: 1.2rem;
             color: var(--dark-color);
-            margin-bottom: 16px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
         }
 
-        h3::before {
+        .section-title::before {
             content: '';
             display: inline-block;
-            width: 4px;
-            height: 18px;
+            width: 5px;
+            height: 20px;
             background-color: var(--primary-color);
-            border-radius: 2px;
+            border-radius: 3px;
         }
 
-        p {
-            color: var(--text-muted);
-            margin-bottom: 10px;
+        .profile-text {
+            color: var(--text-color);
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            border: 1px solid #dbeafe;
-        }
-
-        .job {
-            background: #fafafa;
+        .card {
+            background: #f8fafc;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            transition: border-color 0.2s;
         }
 
-        .job-header {
+        .card:hover {
+            border-color: #cbd5e1;
+        }
+
+        .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        .job-title {
-            font-weight: 700;
+        .card-title {
             font-size: 1.1rem;
+            font-weight: 700;
             color: var(--dark-color);
         }
 
-        .job-company {
+        .card-company {
             color: var(--primary-color);
             font-weight: 600;
             font-size: 0.95rem;
         }
 
-        .job-date {
+        .card-date {
             font-size: 0.85rem;
-            color: #64748b;
-            background: #f1f5f9;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 500;
+            color: #475569;
+            background: #e2e8f0;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
         }
 
-        .job ul {
+        .card ul {
             margin-left: 20px;
-            color: var(--text-muted);
+            color: var(--text-color);
         }
 
-        .job li {
-            margin-bottom: 6px;
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skills-group h4 {
+            font-size: 0.95rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid #bae6fd;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .dots {
+            color: var(--primary-color);
+            letter-spacing: 3px;
         }
 
         @media (max-width: 640px) {
-            body {
-                padding: 12px;
-            }
-            .container {
+            header, .content {
                 padding: 24px;
             }
-            h1 {
-                font-size: 1.75rem;
+            header h1 {
+                font-size: 1.8rem;
             }
-            .job-header {
+            .card-header {
                 flex-direction: column;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="resume-container">
+        
         <header>
-            <h1>Técnico Help Desk y Soporte IT (Nivel 1)</h1>
-            <div class="subtitle">Especialista en Soporte Técnico, Sistemas e Infraestructura Multisede</div>
-            <div class="contact-info">
-                <span>📍 Valencia, España</span>
-                <span>📧 <a href="mailto:anthozy@msn.com">anthozy@msn.com</a></span>
-                <span>💼 <a href="https://www.linkedin.com/in/antonio-guardiola-haba-b480664a" target="_blank" rel="noopener noreferrer">Perfil de LinkedIn</a></span>
+            <h1>Antonio Guardiola Haba</h1>
+            <h2>Técnico Help Desk y Soporte de Nivel 1</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-item">📍 Valencia, España</div>
+                <div class="contact-item">📞 +34 690 663 670</div>
+                <div class="contact-item">📧 <a href="mailto:anthozy@msn.com">anthozy@msn.com</a></div>
+                <div class="contact-item">💼 <a href="https://www.linkedin.com/in/antonio-guardiola-haba-b480664a" target="_blank" rel="noopener noreferrer">Ver Perfil de LinkedIn</a></div>
+                <div class="contact-item">🚗 Carnet de conducir (B) / Vehículo propio</div>
             </div>
         </header>
 
-        <section>
-            <h3>Perfil Profesional</h3>
-            <p>Técnico de Soporte IT de Nivel 1 con sólida experiencia en la gestión y resolución integral de incidencias complejas en entornos multisede. Especializado en atención avanzada a usuarios, diagnóstico de hardware/software, administración de sistemas y optimización de flujos de trabajo mediante plataformas ITSM/ticketing.</p>
-        </section>
+        <div class="content">
 
-        <section>
-            <h3>Habilidades Técnicas</h3>
-            <div class="skills-grid">
-                <span class="skill-tag">Soporte Nivel 1</span>
-                <span class="skill-tag">Linux & Windows</span>
-                <span class="skill-tag">ServiceNow</span>
-                <span class="skill-tag">Jira</span>
-                <span class="skill-tag">Gestión de Ticketing</span>
-                <span class="skill-tag">Infraestructura IT</span>
-                <span class="skill-tag">Redes y Telefonía</span>
-                <span class="skill-tag">Hardware y Mantenimiento</span>
-            </div>
-        </section>
+            <section>
+                <h3 class="section-title">Perfil Profesional</h3>
+                <p class="profile-text">
+                    Persona activa, responsable y trabajadora en cualquier entorno que se me presente, dispuesto a trabajar en equipo y con ganas de aprender y mejorar ante cualquier situación y oficio. Predisposición laboral en jornadas completas y con muchas ganas de trabajar.
+                </p>
+            </section>
 
-        <section>
-            <h3>Experiencia Profesional</h3>
-            
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Técnico Help Desk y Soporte IT - Nivel 1</div>
-                        <div class="job-company">Eltec (Proyecto supermercados Día)</div>
+            <section>
+                <h3 class="section-title">Experiencia Profesional</h3>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Técnico Help Desk y Soporte de Nivel 1</div>
+                            <div class="card-company">Eltec (Proyecto supermercados Día) | Valencia</div>
+                        </div>
+                        <span class="card-date">2021 - Act.</span>
                     </div>
-                    <span class="job-date">2021 - Actualidad</span>
+                    <ul>
+                        <li>Gestión y resolución remota integral de un amplio espectro de incidencias técnicas en infraestructura IT multisede (entornos Linux y Windows).</li>
+                        <li>Control, seguimiento y escalado de incidencias mediante plataformas de ticketing (ServiceNow y Jira).</li>
+                        <li>Soporte especializado en terminales, sistemas de redes, telefonía y periféricos comerciales bajo metodologías SLA.</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Gestión y resolución remota integral de incidencias técnicas de Nivel 2 en infraestructura IT multisede (entornos Linux y Windows).</li>
-                    <li>Control, seguimiento, diagnóstico avanzado y escalado de tickets mediante plataformas ServiceNow y Jira.</li>
-                    <li>Soporte técnico especializado en terminales, equipamiento de red, telefonía IP y periféricos bajo estrictos acuerdos de nivel de servicio (SLA).</li>
-                </ul>
-            </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Técnico de Campo y Mantenimiento de Equipos</div>
-                        <div class="job-company">Eltec (Proyecto Ayuntamiento de Valencia)</div>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Técnico de Campo de Equipos Informáticos</div>
+                            <div class="card-company">Eltec (Proyecto Ayuntamiento de Valencia) | Valencia</div>
+                        </div>
+                        <span class="card-date">2019 - 2021</span>
                     </div>
-                    <span class="job-date">2019 - 2021</span>
+                    <ul>
+                        <li>Diagnóstico, reparación y mantenimiento preventivo/correctivo de equipos informáticos (PC, portátiles y una amplia gama de impresoras distribuidas en las diferentes dependencias del Ayuntamiento).</li>
+                        <li>Asistencia técnica especializada durante los Plenos y sesiones del Ayuntamiento de Valencia.</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Diagnóstico, reparación física y mantenimiento preventivo/correctivo de estaciones de trabajo (PC, portátiles) e impresoras en dependencias municipales.</li>
-                    <li>Despliegue y configuración de hardware de red y puestos de trabajo in situ.</li>
-                </ul>
-            </div>
 
-        </section>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Comercial</div>
+                            <div class="card-company">Parafarmacias Mundo Natural | Valencia</div>
+                        </div>
+                        <span class="card-date">2013 - 2017</span>
+                    </div>
+                    <ul>
+                        <li>Atención al cliente, asesoramiento comercial y gestión de ventas directas.</li>
+                    </ul>
+                </div>
 
-        <section>
-            <h3>Formación</h3>
-            <p><strong>Técnico en Sistemas y Soporte Informático</strong></p>
-        </section>
-    </div>
+            </section>
 
-</body>
-</html>
+            <section>
+                <h3 class="section-title">Formación</h3>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Grado Medio en Informática</div>
+                            <div class="card-company">Centro de Enseñanzas Profesionales CAJ | Valencia</div>
+                        </div>
+                        <span class="card-date">2008 - 2010</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Curso de Photoshop</div>
+                            <div class="card-company">PG Formación | Valencia</div>
+                        </div>
+                        <span class="card-date">2011</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Cursos Microsoft</div>
+                            <div class="card-company">PG Formación / Microsoft</div>
+                        </div>
+                        <span class="card-date">2026</span>
+                    </div>
+                    <ul>
+                        <li><strong>AB-730:</strong> Mejora tus procesos y flujos de trabajo con IA Generativa y Microsoft Copilot.</li>
+                        <li><strong>AB-731:</strong> Lidera la implementación de IA generativa en tu organización.</li>
+                        <li><strong>AI-901:</strong> Introducción a la IA en Azure.</li>
+                        <li><strong>AB-900:</strong> Fundamentos de administración de Microsoft 365 Copilot y agentes de IA.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section>
+                <h3 class="section-title">Habilidades Profesionales y Personales</h3>
+                
+                <div class="skills-container">
+                    
+                    <div class="skills-group">
+                        <h4>Habilidades Técnicas</h4>
+                        <div class="tags-wrapper">
+                            <span class="tag">HelpDesk</span>
+                            <span class="tag">Microinformática</span>
+                            <span class="tag">
